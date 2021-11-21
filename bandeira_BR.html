@@ -1,0 +1,96 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+
+    pincel.fillStyle="green";
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle="yellow";
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(300, 350);
+    pincel.lineTo(550, 200)
+    pincel.fill();
+
+    pincel.fillStyle="darkblue";
+    pincel.beginPath();
+
+    pincel.arc(300, 200, 100, 0, 2* 3.14);
+    pincel.fill();
+
+    pincel.fillStyle="white";
+    pincel.fillRect(200, 180, 200, 20);
+
+    pincel.fillStyle="green";
+    pincel.font = "bold 12px sans-serif";
+    pincel.fillText( "ORDEM E PROGRESSO", 230, 195);
+
+
+    function desenhaEstrela(x, y) {
+        pincel.beginPath();
+        pincel.fillStyle = 'white';
+        pincel.moveTo(x, y-5);
+        pincel.lineTo(x-1, y-1);
+        pincel.lineTo(x-5, y-1);
+        pincel.lineTo(x-2, y+1);
+        pincel.lineTo(x-3, y+5);
+        pincel.lineTo(x, y+3);
+        pincel.lineTo(x+3, y+5);
+        pincel.lineTo(x+2, y+1);
+        pincel.lineTo(x+5, y-1);
+        pincel.lineTo(x+1, y-1);
+        pincel.fill();
+    }
+
+    //de cima
+    desenhaEstrela(340, 170)
+
+    //solo esquerda superior
+    desenhaEstrela(215, 210)
+    
+    //esquerda inferior
+    desenhaEstrela(225, 247)
+    desenhaEstrela(233, 240)
+    desenhaEstrela(240, 233)
+    desenhaEstrela(248, 247)
+    desenhaEstrela(247, 256)
+    desenhaEstrela(262, 257)
+
+    //solo centro/esquerda superior
+    desenhaEstrela(260, 220)
+
+    //solo centro/direita superior
+    desenhaEstrela(320, 210)
+
+    //cruzeiro do sul
+    desenhaEstrela(295, 230)
+    desenhaEstrela(296, 257)
+    desenhaEstrela(303, 237)
+    desenhaEstrela(288, 239)
+    desenhaEstrela(294, 245)
+
+    //solo inferior
+    desenhaEstrela(296, 290)
+
+    //triangulo invertido
+    desenhaEstrela(318, 264)
+    desenhaEstrela(330, 263)
+    desenhaEstrela(324, 272)
+
+    //direita
+    desenhaEstrela(390, 210)
+    desenhaEstrela(380, 216)
+    desenhaEstrela(385, 226)
+    desenhaEstrela(380, 232)
+    desenhaEstrela(375, 238)
+    desenhaEstrela(367, 240)
+    desenhaEstrela(372, 248)
+    desenhaEstrela(373, 258)
+
+
+</script>
